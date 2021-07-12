@@ -29,7 +29,7 @@ npm install
 
 -  **Execute os testes**
 ```
-npm run tes
+npm run test
 ```
 
 -  **Inicie a aplicação**
