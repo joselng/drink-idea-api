@@ -1,48 +1,44 @@
-React Native / React JS + Node.js
-Criar um app utilizando a TheCocktailDB
-Não utilizar Expo
-Criar um nome pro app
-Dar atenção a paleta de cores, UX e todo detalhe de layout que deixe
-o app mais agradável.
-O App deve ter o seguinte fluxo Categorias -> Drinks -> Detalhe dos drinks
-Não esquecer de mostrar as imagens
-Ter sistema de busca conforme o que API tem
-Redux Obrigatório,
-Unstated, MobX, são diferenciais (não é obrigatório)
-Toda a programação em inglês e constâncias no padrão de código (eslint, airbnb) são pontos essênciais.
-Se conseguir adicionar videos de Drinks do Youtube e outras integrações são diferenciais
-Testes unitários são diferenciais
+# Drink Idea API
 
-Backend
-Adicionar cadastro, login e favoritos nos drinks
-Adicionar funcionalidades no app
-Criar API de login, cadastro e favoritos
+Projeto desenvolvido em Node.js utilizando Typescript e Typeorm para adicionar funcionalidades de cadastramento de usuários e favoritos ao aplicativo Drink Idea (https://github.com/joselng/drink-idea)
 
-Drinks
-  - idDrink
-  - strDrink
-  - strDrinkThumb
+#### Testes
+<img alt="screenshot" src="https://github.com/joselng/drink-idea-api/blob/main/src/screenshot_1.png">
 
-Drinks Details
-  - idDrink
-  - strDrink
-  - strTags
-  - strVideo
-  - strCategory
-  - strAlcoholic
-  - strGlass
-  - strInstructions
-  - strIngredient[1/15]
-  - strDrinkThumb
+### Passo a passo para utilização
 
-- Filter by alcoholic
-www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic
-www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic
+-  **Clone o repositório**
+```
+git clone https://github.com/joselng/drink-idea-api.git
+```
 
-- Filter by Category
-www.thecocktaildb.com/api/json/v1/1/filter.php?c=Ordinary_Drink
-www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail
+-  **Acesse a pasta drink-idea-api**
+```
+cd drink-idea-api
+```
 
-- Filter by Glass
-www.thecocktaildb.com/api/json/v1/1/filter.php?g=Cocktail_glass
-www.thecocktaildb.com/api/json/v1/1/filter.php?g=Champagne_flute
+-  **Renomeie o arquivo .env.example para .env**
+```
+cp .env.example .env
+```
+
+-  **Instale as dependências**
+```
+npm install
+```
+
+-  **Execute os testes**
+```
+npm run tes
+```
+
+-  **Inicie a aplicação**
+```
+npm dev:server
+```
+
+### *** Faça o download do aplicação front-end para utilização das funcionalidades
+
+https://github.com/joselng/drink-idea
+
+

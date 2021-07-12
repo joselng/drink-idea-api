@@ -3,6 +3,7 @@ import 'express-async-errors';
 import '@app/container';
 
 import cors from 'cors';
+import helmet from 'helmet';
 import express, { NextFunction, Request, Response } from 'express';
 import { createConnection } from 'typeorm';
 
@@ -35,13 +36,14 @@ class App {
         }
         return response.status(500).json({
           status: 'error',
-          message: 'Internal Server Error',
+          message: 'Desculpe o transtorno, já estamos cientes do erro ocorrido e estamos trabalhando na sua correção.',
         });
       },
     );
   }
 
   private middlewares(): void {
+    this.server.use(helmet());
     this.server.use(cors());
     this.server.use(express.json());
   }

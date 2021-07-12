@@ -10,14 +10,14 @@ export default class FavoritesController {
     const createFavorite = container.resolve(CreateFavoriteService);
     const favorite = await createFavorite.execute({ userId, drinkId });
 
-    return response.json(favorite);
+    return response.status(201).json(favorite);
   }
 
   async delete(request: Request, response: Response): Promise<Response> {
     const { userId, drinkId } = request.body;
     const deleteFavorite = container.resolve(DeleteFavoriteService);
-    const favorite = await deleteFavorite.execute({ userId, drinkId });
+    const favorite = await deleteFavorite.execute(userId, drinkId);
 
-    return response.json(favorite);
+    return response.status(202).json(favorite);
   }
 }

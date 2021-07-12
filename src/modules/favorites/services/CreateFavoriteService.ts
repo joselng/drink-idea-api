@@ -18,16 +18,15 @@ export default class CreateFavoriteService {
   ) {}
 
   public async execute({ userId, drinkId }: Request): Promise<Favorite> {
-    const checkFavorite = await this.favoritesRepository.findByIds({ userId, drinkId });
-
-    if (checkFavorite) {
-      throw new AppError('O endereço de email já está em uso.');
+    if (!userId || !drinkId) {
+      throw new AppError('Você deve preencher todos os campos');
     }
 
-    const user = await this.favoritesRepository.create({
+    const favorite = await this.favoritesRepository.create({
       userId,
       drinkId,
     });
-    return user;
+
+    return favorite;
   }
 }

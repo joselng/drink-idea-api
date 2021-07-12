@@ -3,10 +3,6 @@ import { DeleteResult } from 'typeorm';
 
 import UsersRepository from '../repositories/UsersRepository';
 
-interface Request {
-  id: number;
-}
-
 @injectable()
 export default class DeleteUserService {
   constructor(
@@ -14,7 +10,7 @@ export default class DeleteUserService {
     private usersRepository: UsersRepository,
   ) {}
 
-  public async execute({ id }: Request): Promise<DeleteResult> {
+  public async execute(id: number): Promise<DeleteResult> {
     const user = await this.usersRepository.delete(id);
 
     return user;

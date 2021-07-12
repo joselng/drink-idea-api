@@ -3,7 +3,7 @@ const { compilerOptions } = require('./tsconfig.json');
 
 module.exports = {
   clearMocks: true,
-  collectCoverage: true,
+  collectCoverage: false,
   collectCoverageFrom: [
     '<rootDir>/src/modules/**/services/*.ts',
   ],
@@ -20,6 +20,6 @@ module.exports = {
   setupFiles: ['./jest.setup.js'],
   testEnvironment: 'node',
   testMatch: [
-    '**/*.spec.ts',
+    '**/*.test.ts',
   ],
 };
