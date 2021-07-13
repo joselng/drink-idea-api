@@ -34,7 +34,7 @@ npm run test
 
 -  **Inicie a aplicação**
 ```
-npm dev:server
+npm run dev:server
 ```
 
 ### *** Faça o download do aplicação front-end para utilização das funcionalidades
